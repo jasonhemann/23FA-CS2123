@@ -1,0 +1,84 @@
+<!doctype HTML>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+    displayMath: [ ["$$","$$"], 
+                   ["\\[","\\]"], 
+                   ["\\begin{equation}","\\end{equation}"], 
+                   ["\\begin{equation*}","\\end{equation*}"] ],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|JavaHighlightBlock|JavaHighlight"
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    webFont: "Asana-Math",
+    preferredFont: "Asana-Math",
+    imageFont: null,
+    mtexFontInherit: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="codemirror.js"></script>
+<script src="runmode.js"></script>
+<script src="setup-page.js"></script>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=0.8"/><title>Recitation 4: Working with Abstract Classes, Problem Solving</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="racket.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-style.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-racket.css" title="default"/><link rel="stylesheet" type="text/css" href="extra-styles.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">&#9658;</a></td><td></td><td><a href="index.html" class="tocviewlink" data-pltdoc="x">CSAS-<wbr></wbr>2123
+<br/>
+Introduction to Object-<wbr></wbr>Oriented Design</a></td></tr></table></div><div class="tocviewsublisttop" style="display: none;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="General.html" class="tocviewlink" data-pltdoc="x">General</a></td></tr><tr><td align="right"></td><td><a href="Texts.html" class="tocviewlink" data-pltdoc="x">Texts</a></td></tr><tr><td align="right"></td><td><a href="Lectures.html" class="tocviewlink" data-pltdoc="x">Lectures</a></td></tr><tr><td align="right"></td><td><a href="Syllabus.html" class="tocviewlink" data-pltdoc="x">Syllabus</a></td></tr><tr><td align="right"></td><td><a href="Recitations.html" class="tocviewselflink" data-pltdoc="x">Recitations</a></td></tr><tr><td align="right"></td><td><a href="Assignments.html" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="Pair_Programming_Overview.html" class="tocviewlink" data-pltdoc="x">Pair Programming Overview</a></td></tr><tr><td align="right"></td><td><a href="code-style.html" class="tocviewlink" data-pltdoc="x">Code style</a></td></tr><tr><td align="right"></td><td><a href="Documentation.html" class="tocviewlink" data-pltdoc="x">Documentation</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">&#9660;</a></td><td></td><td><a href="Recitations.html" class="tocviewlink" data-pltdoc="x">Recitations</a></td></tr></table><div class="tocviewsublist" style="display: block;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="recitation1.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 1:</span> Introduction to Intelli<span class="mywbr"> &nbsp;</span>J and Simple Data Definitions</a></td></tr><tr><td align="right"></td><td><a href="recitation2.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 2:</span> Working with Self-<wbr></wbr>Referential Data</a></td></tr><tr><td align="right"></td><td><a href="recitation3.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 3:</span> Methods for Complex Data</a></td></tr><tr><td align="right"></td><td><a href="" class="tocviewselflink" data-pltdoc="x"><span class="RecitationNum">Recitation 4:</span> Working with Abstract Classes, Problem Solving</a></td></tr><tr><td align="right"></td><td><a href="recitation5.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 5:</span> Custom Constructors and Equality</a></td></tr><tr><td align="right"></td><td><a href="recitation6.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 6:</span> Designing a simple game</a></td></tr><tr><td align="right"></td><td><a href="recitation7.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 7:</span> Parametric data and visitors</a></td></tr><tr><td align="right"></td><td><a href="recitation8.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 8:</span> Understanding Mutation</a></td></tr><tr><td align="right"></td><td><a href="recitation9.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 9:</span> Working with Cyclic Data</a></td></tr><tr><td align="right"></td><td><a href="recitation10.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 10:</span> Imperative Worlds</a></td></tr><tr><td align="right"></td><td><a href="recitation11.html" class="tocviewlink" data-pltdoc="x"><span class="RecitationNum">Recitation 11:</span> Working with Stacks, Queues and Trees</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_2&quot;);">&#9658;</a></td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x"><span class="RecitationNum">Recitation 4:</span> Working with Abstract Classes, Problem Solving</a></td></tr></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_2"><table cellspacing="0" cellpadding="0"><tr><td align="right">1&nbsp;</td><td><a href="#%28part._.Abstract_.Classes%29" class="tocviewlink" data-pltdoc="x">Abstract Classes</a></td></tr><tr><td align="right">2&nbsp;</td><td><a href="#%28part._.Problem_.Solving_.Practice%29" class="tocviewlink" data-pltdoc="x">Problem Solving Practice</a></td></tr></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber">1<tt>&nbsp;</tt></span><a href="#%28part._.Abstract_.Classes%29" class="tocsubseclink" data-pltdoc="x">Abstract Classes</a></td></tr><tr><td><span class="tocsublinknumber">2<tt>&nbsp;</tt></span><a href="#%28part._.Problem_.Solving_.Practice%29" class="tocsubseclink" data-pltdoc="x">Problem Solving Practice</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><div class="versionbox"><span class="version">8.10</span></div><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;<span class="tocsettoggle">&nbsp;&nbsp;<a href="javascript:void(0);" title="show/hide table of contents" onclick="TocsetToggle();">contents</a></span></span><span class="navright">&nbsp;&nbsp;<a href="recitation3.html" title="backward to &quot;Recitation 3: Methods for Complex Data&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="Recitations.html" title="up to &quot;Recitations&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="recitation5.html" title="forward to &quot;Recitation 5: Custom Constructors and Equality&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div><h4><a name="(part._)"></a><span class="RecitationNum">Recitation 4:</span> Working with Abstract Classes, Problem Solving</h4><p><span style="font-weight: bold">Goals:</span> The goals of this lab are to learn how to design and use abstract classes,
+and to solve problems with the use of accumulators.</p><h5>1<tt>&nbsp;</tt><a name="(part._.Abstract_.Classes)"></a>Abstract Classes</h5><p>The following class diagram represents a library system that records the books
+that have been borrowed. There are three kinds of books: regular books, reference
+books, and audio books.</p><p>Reference books can be taken out for just two days, while other kinds of books may be borrowed for two weeks.
+The overdue fees are 10 cents per day for reference books and regular books,
+and 20 cents per day for audio books.</p><p>Audio books and regular books have both authors and titles; reference books only have titles.</p><p>The day when the book is taken out and the day due are counted as days since
+the library opened on New Year&rsquo;s Day in 2001. So, for example, an audio book taken out recently would be
+recorded as taken out on the day
+8272 with due date on the day
+8286.</p><pre class="AsciiArt">               +-------+
+               | IBook |
+               +-------+
+                  / \
+                  ---
+                   |
+       ---------------------------------------
+       |                  |                  |
++---------------+  +---------------+  +---------------+
+| Book          |  | RefBook       |  | AudioBook     |
++---------------+  +---------------+  +---------------+
+| String title  |  | String title  |  | String title  |
+| String author |  | int dayTaken  |  | String author |
+| int dayTaken  |  +---------------+  | int dayTaken  |
++---------------+                     +---------------+</pre><ul><li><p>Design the interfaces and classes that represent the library
+borrowing system.</p><p>Define the abstract class <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">ABook</span><span class="RktMeta"></span></span></span> and lift those fields that can
+be lifted to this class.</p></li><li><p>Design the method <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">daysOverdue</span><span class="RktMeta"></span></span></span> that consumes the number
+that represents today in the library date-recording system and
+produces the number of days this book is overdue. If the number
+is negative, the book can still be out for that many days.</p></li><li><p>Design the method <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">isOverdue</span><span class="RktMeta"></span></span></span> that produces a boolean value
+that informs us whether the book is overdue on the given day.</p></li><li><p>Design the method <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">computeFine</span><span class="RktMeta"></span></span></span>  that computes the fine for
+this book, if the book is returned on the given day.</p></li></ul><p>For all methods, think carefully whether they should be designed being
+implemented solely in the abstract class, implemented solely
+in the concrete classes, or implemented in the abstract
+class and then overridden in some of the concrete classes.</p><h5>2<tt>&nbsp;</tt><a name="(part._.Problem_.Solving_.Practice)"></a>Problem Solving Practice</h5><p>The rest of the lab will be dedicated to strengthening problem solving skills,
+in particular the use of accumulators. It will require you to create new classes
+as well as determine what helper methods would be appropriate.</p><ul><li><p>Recall <span class="emph">[Maybe X]</span> from last semester; that is, a <span class="emph">[Maybe X]</span>
+is either an <span class="emph">X</span> or false. Design a <span class="emph">[Maybe Int]</span> interface
+and the relevant classes. Note that false is somewhat of a red herring here,
+as it just represents an absent value. Think about what kind of class would
+represent an absent value well.</p></li><li><p>Design a method on a list of integers which produces
+the integer (or a value indicating the list was empty) that appears
+in the longest consecutive sublist. For example, the list of <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjLiteral">1</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">1</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">5</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">5</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">5</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">4</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">3</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">4</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">4</span><span class="ProfjDefault">,</span><span class="ProfjLiteral">4</span><span class="RktMeta"></span></span></span>
+would produce <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjLiteral">5</span><span class="RktMeta"></span></span></span> (note that ties are broken by  the sublist that appears earlier
+in the list).</p></li><li><p>Design a class for a task. A task has an id (an integer) and a (possibly empty) list of
+prerequisites, represented as the ids of the tasks that need to be completed before that task is.</p></li><li><p>Design a method on a list of tasks which produces the list of the tasks one can complete
+from these tasks. You can assume all task ids are unique.</p><p>Before beginning to program, sketch the helpers you&rsquo;ll need to solve this
+problem, and ask yourself some questions: can task dependencies be cyclic? Are
+any tasks guaranteed to be completable? Be sure to understand these questions
+and what they imply for your program, as well as your examples and test cases.
+Your method should be able to terminate no matter what list it is operating on.</p><p>Note that in the problem definition alone a list of tasks can represent two different things:
+the tasks the method is being called on, and the subset of those tasks that can actually be completed.
+Keeping track of what list of tasks means what as you complete the problem is essential.</p></li><li><p>Once you&rsquo;ve finished the above problem, refine it so that the list produced is in the
+order that one would need to complete the tasks in if this is not already the case.</p></li></ul><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;<span class="tocsettoggle">&nbsp;&nbsp;<a href="javascript:void(0);" title="show/hide table of contents" onclick="TocsetToggle();">contents</a></span></span><span class="navright">&nbsp;&nbsp;<a href="recitation3.html" title="backward to &quot;Recitation 3: Methods for Complex Data&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="Recitations.html" title="up to &quot;Recitations&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="recitation5.html" title="forward to &quot;Recitation 5: Custom Constructors and Equality&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

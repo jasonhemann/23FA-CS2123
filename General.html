@@ -1,0 +1,138 @@
+<!doctype HTML>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+    displayMath: [ ["$$","$$"], 
+                   ["\\[","\\]"], 
+                   ["\\begin{equation}","\\end{equation}"], 
+                   ["\\begin{equation*}","\\end{equation*}"] ],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|JavaHighlightBlock|JavaHighlight"
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    webFont: "Asana-Math",
+    preferredFont: "Asana-Math",
+    imageFont: null,
+    mtexFontInherit: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="codemirror.js"></script>
+<script src="runmode.js"></script>
+<script src="setup-page.js"></script>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=0.8"/><title>General</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-style.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-racket.css" title="default"/><link rel="stylesheet" type="text/css" href="extra-styles.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">&#9660;</a></td><td></td><td><a href="index.html" class="tocviewlink" data-pltdoc="x">CSAS-<wbr></wbr>2123
+<br/>
+Introduction to Object-<wbr></wbr>Oriented Design</a></td></tr></table></div><div class="tocviewsublisttop" style="display: block;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="" class="tocviewselflink" data-pltdoc="x">General</a></td></tr><tr><td align="right"></td><td><a href="Texts.html" class="tocviewlink" data-pltdoc="x">Texts</a></td></tr><tr><td align="right"></td><td><a href="Lectures.html" class="tocviewlink" data-pltdoc="x">Lectures</a></td></tr><tr><td align="right"></td><td><a href="Syllabus.html" class="tocviewlink" data-pltdoc="x">Syllabus</a></td></tr><tr><td align="right"></td><td><a href="Recitations.html" class="tocviewlink" data-pltdoc="x">Recitations</a></td></tr><tr><td align="right"></td><td><a href="Assignments.html" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="Pair_Programming_Overview.html" class="tocviewlink" data-pltdoc="x">Pair Programming Overview</a></td></tr><tr><td align="right"></td><td><a href="code-style.html" class="tocviewlink" data-pltdoc="x">Code style</a></td></tr><tr><td align="right"></td><td><a href="Documentation.html" class="tocviewlink" data-pltdoc="x">Documentation</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">&#9658;</a></td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">General</a></td></tr></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="#%28part._.People%29" class="tocviewlink" data-pltdoc="x">People</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Communications%29" class="tocviewlink" data-pltdoc="x">Communications</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.General_.Policies%29" class="tocviewlink" data-pltdoc="x">General Policies</a></td></tr><tr><td align="right"></td><td><a href="#%28part._general-lectures%29" class="tocviewlink" data-pltdoc="x">Lectures</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Computing_.Environment%29" class="tocviewlink" data-pltdoc="x">Computing Environment</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Assignments._%28general%29%29" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Pair_.Programming%29" class="tocviewlink" data-pltdoc="x">Pair Programming</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Academic_.Integrity%29" class="tocviewlink" data-pltdoc="x">Academic Integrity</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Exams%29" class="tocviewlink" data-pltdoc="x">Exams</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Grades%29" class="tocviewlink" data-pltdoc="x">Grades</a></td></tr></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.People%29" class="tocsubseclink" data-pltdoc="x">People</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Communications%29" class="tocsubseclink" data-pltdoc="x">Communications</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.General_.Policies%29" class="tocsubseclink" data-pltdoc="x">General Policies</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._general-lectures%29" class="tocsubseclink" data-pltdoc="x">Lectures</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Computing_.Environment%29" class="tocsubseclink" data-pltdoc="x">Computing Environment</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Assignments._%28general%29%29" class="tocsubseclink" data-pltdoc="x">Assignments</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Pair_.Programming%29" class="tocsubseclink" data-pltdoc="x">Pair Programming</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Academic_.Integrity%29" class="tocsubseclink" data-pltdoc="x">Academic Integrity</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Exams%29" class="tocsubseclink" data-pltdoc="x">Exams</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Grades%29" class="tocsubseclink" data-pltdoc="x">Grades</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><div class="versionbox"><span class="version">8.10</span></div><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;<span class="tocsettoggle">&nbsp;&nbsp;<a href="javascript:void(0);" title="show/hide table of contents" onclick="TocsetToggle();">contents</a></span></span><span class="navright">&nbsp;&nbsp;<a href="index.html" title="backward to &quot;CSAS-2123
+
+
+Introduction to Object-Oriented Design&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="index.html" title="up to &quot;CSAS-2123
+
+
+Introduction to Object-Oriented Design&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Texts.html" title="forward to &quot;Texts&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div><h3><a name="(part._.General)"></a>General</h3><h4><a name="(part._.People)"></a>People</h4><p><span style="font-weight: bold">Instructors:</span></p><p><table cellspacing="0" cellpadding="0" class="PaddedTable"><tr><td><blockquote class="SCentered"><p><img src="jason_hemann.jpg" alt=""/><br/><a href="https://www.shu.edu/profiles/hemannja.html" class="plainlink">Jason Hemann</a><br/><span class="stt">hemannja@shu</span></p></blockquote></td><td><p></p></td><td><p></p></td></tr></table></p><p><span style="font-weight: bold">TAs:</span></p><p><table cellspacing="0" cellpadding="0" class="PaddedTable"><tr><td><blockquote class="SCentered"><p><img src="man.jpg" alt=""/><br/>Jayvin Irby<br/><span class="stt">jayvin.irby@student.shu</span></p></blockquote></td><td><p></p></td><td><p></p></td></tr></table></p><p>Your TAs help with class and hold office hours. In general,
+they are apprentice teachers and are here to learn how to run a
+course. At the same time, though, they are your peers who have taken
+the course, and can see your problems from your perspective.</p><h4><a name="(part._.Communications)"></a>Communications</h4><p>If you need help, you may talk to the instructor or the TAs during their office hours.</p><p><span style="color: red">Posting or sharing parts of a solution to any parts of a homework assignment is considered
+cheating. Even after it is due. <span style="font-weight: bold">You don&rsquo;t want to do this.</span></span> Limit your answers to other students to providing
+clarity when needed and hints when appropriate. This is good practice should you ever want to be on staff :)</p><h4><a name="(part._.General_.Policies)"></a>General Policies</h4><ul><li><p><span style="font-weight: bold">Late assignment policy:</span> An assignment that is one second late is automatically
+  counted as a full day late. Each student gets four free, no-questions-asked late days for
+  the term. The purpose of late days is make the extension process fair and transparent by getting
+  the instructors out of the extension-granting business entirely. Instead, when you need an
+  extension, you can take one&#8212;provided you have a late day remaining.</p><p>To use a late day, just email your instructor the homework. Your instructor will upload it to the server
+  and keep track of the number of used late days, and will prevent you from submitting more than one day
+  late to any assignment, or late at all if you&#8217;ve used all your late days. Conserve your late days carefully.</p><p>No more than one late day may be used on any one homework. Late days cannot be divided
+  fractionally, but must be used whole. Late days cannot be transferred to or shared with
+  a partner, so in order to take an extension both you and your partner must have sufficient
+  late days remaining. Choose your partners carefully. </p></li><li><p><span style="font-weight: bold">Laptop policy:</span> No laptops in class. I can hand-write code, so can you.</p></li><li><p><span style="font-weight: bold">Academic honesty:</span> We will strictly enforce the school, college, and department&rsquo;s
+academic integrity policies.  You may discuss problems with other students, but you may
+ not share or show code to anyone other than your assigned partner or the
+ course staff.  Violations of academic integrity will be reported and
+ will have a negative impact on your grade.</p></li></ul><h4><a name="(part._general-lectures)"></a>Lectures</h4><blockquote><p>Section 1: Monday and Wednesday at 9:30&ndash;10:45 am<br/><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SC 109<span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Hemann</p></blockquote><p><span style="font-weight: bold">Lectures policy:</span></p><p>You are required to read the lecture material for the given lecture before
+coming to class. During the lectures we will discuss the material
+covered in the required reading, answer questions, provide
+additional examples and applications.</p><p>It is OK if you do not understand everything when you first read it,
+but reading about the new concept ahead of the time will give you
+a chance to anticipate the questions you may have and allow you
+to follow better the details of explanation during the lectures.</p><p><span style="font-weight: bold">Recitations</span></p><p>The goal of the recitations is to see in practice problems that illustrate
+the concepts covered in the lectures, and to prepare you for the next
+programming assignment.</p><p>There is a lot of technical detail related to running Java programs that will
+be covered in the early recitations.  Later ones may focus more on design questions
+and on good Java programming practice.</p><p><span style="font-weight: bold">In-class Quizzes and Code review</span></p><p>We will be running quizzes during several of the classes,
+possibly without prior warning. The goal of the quizzes is to see that
+you are familiar with the most basic concepts covered during
+the recent lectures and assignments.</p><p>Quizzes will be graded, and are counted as part of your exam scores
+(see <a href="#%28part._.Exams%29" data-pltdoc="x">Exams</a> below).  The intent is to assess your progress in
+the course in smaller chunks rather than just through lengthy midterm exams.</p><p>If you do not pass the quiz, you need to meet with the instructor
+within the next week, to identify the problems you
+may have and to help you get back on track. Only one makeup of a quiz will be allowed.</p><p>We may also conducting walking code reviews, of material from recent
+homework assignments. As presenters, be prepared to explain your
+design choices to your classmates. As reviewers, pay attention both to
+how the presenters organize their explanations and how they organize
+their code, and feel free to ask clarifying questions about either.</p><h4><a name="(part._.Computing_.Environment)"></a>Computing Environment</h4><p>You will complete your assignments (other than the first
+one) using the <a href="https://www.jetbrains.com/idea/download/">IntelliJ IDE</a>. Though, if you feel more
+comfortable, you may choose to use another IDE (e.g. NetBeans) or work
+directly from the command line, but you and your partner must both be
+comfortable with the chosen programming environment, and the staff may
+not be able to assist you with issues encountered in other
+environments.</p><p>You will use <a href="https://www.gradescope.com/">the handin server</a> to submit
+your homework.  You may submit as many times as you wish, though submitting too
+frequently will be detected and rate-limited, to ensure fairness for other
+students.  Be aware that close to the deadline when everyone submits all at
+once, the server will become less responsive.</p><h4><a name="(part._.Assignments._(general))"></a>Assignments</h4><p>There will be one problem set each week. As with CSAS1114/1115, the
+problem sets will include ungraded exercises and practice problems,
+that you are strongly encouraged to look at and confirm that you can
+solve. You are welcome to bring solutions to these problems to the
+course staff during the semester for informal feedback on how you&rsquo;re
+doing.</p><p>The graded problems are to be solved collaboratively with your partner.  The
+problems will consist of structured programming assignments that may be based
+on the work done in previous weeks, and may also include more creative projects
+where you can practice your design skills.</p><p><span style="font-weight: bold">Due Dates: <span class="emph">Thursdays at 10:00pm,</span></span> unless otherwise
+specified. See the late policy above.</p><p><span style="color: red"><span style="font-weight: bold">Note:</span></span> You will submit each problem <span class="emph">separately</span> on
+the handin server. This is for your benefit: the server will attempt
+to compile and run your program against automated test cases. Having
+separate submissions for each problem means that a syntax error in one
+problem won&rsquo;t immediately prevent your other problems from compiler
+also. Be careful to submit the correct answers to the correct
+problems.</p><h4><a name="(part._.Pair_.Programming)"></a>Pair Programming</h4><p>You must work on problem sets in pairs. We will assign you a partner. You will
+switch partners a few times during the semester.</p><p><span style="font-weight: bold">Important</span>
+Pair programming means that you and your partner work on the problem
+sets jointly. You read them together and you work on the solutions
+together. One of the lab&rsquo;s purposes is to teach you how to work in
+pairs effectively; indeed, pairs are provably more effective than
+individuals in programming. The rough idea is this: One of you plays
+<span class="emph">pilot</span>, the other <span class="emph">co-pilot</span>. The pilot works on the
+keyboard and explains aloud what is going on; it is the co-pilot&rsquo;s
+responsibility to question everything. After a problem is solved to
+the satisfaction of both, you <span class="emph">must</span> switch roles.</p><p>Every partner must be able to solve every homework problem in the
+end. In other words, you must be able to solve every homework problem
+on your own.</p><p>If you are having difficulties working with your partner, please inform your
+instructor quickly: we cannot help if we don&rsquo;t know there&rsquo;s a
+problem.</p><h4><a name="(part._.Academic_.Integrity)"></a>Academic Integrity</h4><p>All programs must be completed strictly by you and your partner. You may discuss the problem sets with others. However, <span style="font-weight: bold"><span class="emph">you may not share code in any way</span>. Your code should not look as though it came from someone or somewhere else. Submitting code that
+is not your own will be considered a violation of the University&rsquo;s Academic
+Integrity Policy .</span>  Violations of academic integrity will be
+reported, and will have strong consequences
+on your grade, from an automatic zero on the assignment to failing the course.</p><p><span style="font-weight: bold"><span style="color: red">NOTE:</span></span> Be aware that while <span class="emph">submitting</span> someone else&rsquo;s code is
+clearly a violation, so is <span class="emph">sharing your code with others</span>, even if you
+truly just mean to help.  Outside an academic environment, sharing code with
+unauthorized parties can be a criminal offense and have severe and
+unanticipated consequences.</p><p>If you are ever unsure of whether sharing is unacceptable or not, ask one of the course staff.</p><h4><a name="(part._.Exams)"></a>Exams</h4><p>You may bring one sheet of notes to exams (may be typed or hand-written, one-sided or double-sided).</p><h4><a name="(part._.Grades)"></a>Grades</h4><p><div class="SIntrapara">Your final grade is composed of:
+</div><div class="SIntrapara"><ul><li><p><span style="font-weight: bold">40% homework</span>.  Most homeworks will be equally weighted; homework 5
+will be worth more, and homeworks 9 and 10 will be worth double: these are
+larger projects and will take more time.</p></li><li><p><span style="font-weight: bold">55% quizzes and exams</span>, with exact proportions to be determined.</p></li><li><p><span style="font-weight: bold">5% participation</span>, meaning active participation in class and lab</p></li></ul></div></p><p>There will likely be some small amount of extra credit available on the last
+two assignments.  Details to be determined.</p><p>As before, you can use the handin server to see the current weights of each
+assignment, and your approximate grade in the course so far.  <span style="font-weight: bold">The exact
+weights of assignments, quizzes and exams will change during the semester,
+depending on exactly how many of each we have.  We will let you know when we
+update these weights, and will try to keep it as infrequent as possible.</span></p><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;<span class="tocsettoggle">&nbsp;&nbsp;<a href="javascript:void(0);" title="show/hide table of contents" onclick="TocsetToggle();">contents</a></span></span><span class="navright">&nbsp;&nbsp;<a href="index.html" title="backward to &quot;CSAS-2123
+
+
+Introduction to Object-Oriented Design&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="index.html" title="up to &quot;CSAS-2123
+
+
+Introduction to Object-Oriented Design&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Texts.html" title="forward to &quot;Texts&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>
