@@ -14,3 +14,4 @@ jobs:
         with:
           paths: https://hemann.pl/23FA-CS2123
           config: linkinator.config.json
+          timeout: 15000
